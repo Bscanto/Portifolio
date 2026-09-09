@@ -1,0 +1,40 @@
+/* ============================================================
+   VARIABLES.CSS
+   Tokens de design: cores, gradiente de destaque e famílias
+   tipográficas. Tudo no site consome essas variáveis — trocar
+   a paleta é só editar aqui.
+   ============================================================ */
+
+:root {
+  /* cores base (tema escuro — padrão) */
+  --bg: #0a0a0d;
+  --panel: #151519;
+  --panel-2: #1c1c22;
+  --border: rgba(255, 255, 255, 0.1);
+  --border-strong: rgba(255, 255, 255, 0.2);
+  --text: #f4f4f6;
+  --text-soft: #a6a6b0;
+  --text-faint: #68686f;
+
+  /* cor de destaque (azul → ciano) */
+  --accent1: #2563eb;
+  --accent2: #22d3ee;
+  --grad: linear-gradient(100deg, var(--accent1), var(--accent2));
+
+  /* tipografia */
+  --display: "Unbounded", sans-serif;
+  --body: "Inter", system-ui, sans-serif;
+  --mono: "JetBrains Mono", monospace;
+}
+
+/* Tema claro — ativado via classe .light na tag <html> (ver js/theme.js) */
+html.light {
+  --bg: #f3f4f8;
+  --panel: #ffffff;
+  --panel-2: #eef0f5;
+  --border: rgba(10, 13, 20, 0.1);
+  --border-strong: rgba(10, 13, 20, 0.2);
+  --text: #14161d;
+  --text-soft: #4b5162;
+  --text-faint: #8891a1;
+}
