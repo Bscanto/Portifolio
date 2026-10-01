@@ -1,11 +1,9 @@
 <!doctype html>
-<html lang="PT">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
     <title>Bruno — Full Stack Developer</title>
-
     <meta
       name="description"
       content="Bruno Canto — desenvolvedor full stack. Projetos, trajetória e formas de contato."
@@ -13,19 +11,24 @@
     <meta property="og:title" content="Bruno — Full Stack Developer" />
     <meta
       property="og:description"
-      content="Soluções que funcionam."
+      content="Do torno à tela, soluções que funcionam."
     />
     <meta property="og:type" content="website" />
 
-    <link rel="shortcut icon" href="assets/icons/favicon.svg"" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
-
-      <link
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="assets/favicon-16x16.png"
+    />
+    <link
       rel="apple-touch-icon"
       sizes="180x180"
       href="assets/apple-touch-icon.png"
@@ -39,14 +42,10 @@
       rel="stylesheet"
     />
 
-    <link rel="stylesheet" href="style.css">
-
-    <title>Bruno Developer</title>
-
+    <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
-
-     <div class="grain"></div>
+    <div class="grain"></div>
     <div class="cursor-ring"></div>
     <div class="cursor-dot"></div>
 
@@ -130,6 +129,99 @@
         </div>
       </div>
     </header>
-    
+
+    <div class="mobile-menu" id="mobileMenu">
+      <button class="close-btn" id="closeMenuBtn" aria-label="Fechar menu">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.8"
+          stroke-linecap="round"
+        >
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg>
+      </button>
+      <a href="#sobre">Sobre</a>
+      <a href="#faco">O que faço</a>
+      <a href="#trajetoria">Trajetória</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </div>
+
+    <footer>
+      <div class="wrap footer-row">
+        <span class="logo" style="font-size: 16px"
+          >Bruno<span style="color: var(--accent1)">.</span></span
+        >
+        <p>Alegrete, Rio Grande do Sul · © 2026</p>
+        <div class="foot-social">
+          <a
+            href="https://github.com/Bscanto"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="GitHub"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M9.2 20.4c-4 1.2-4-2.1-5.6-2.5m11.2 5v-3.4c0-1 .1-1.4-.5-2 2.4-.3 4.7-1.2 4.7-5.2a4 0 0 0-1.1-2.8 3.7 3.7 0 0 0-.1-2.8s-.9-.3-3 1.1a10.4 10.4 0 0 0-5.4 0c-2.1-1.4-3-1.1-3-1.1a3.7 3.7 0 0 0-.1 2.8 4 4 0 0 0-1.1 2.8c0 4 2.3 4.9 4.7 5.2-.6.6-.6 1.2-.5 2v3.4"
+              />
+            </svg>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/bruno-canto-63072bbb/"
+            target="_blank"
+            rel="noreferrer noopener"
+            aria-label="LinkedIn"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.7"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2" />
+              <path d="M7.2 10.5v6.3M7.2 7.4v.1" />
+              <path
+                d="M11.4 16.8v-6.3M11.4 13.2c0-1.5 1-2.7 2.5-2.7s2.7 1.1 2.7 2.7v3.6"
+              />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <button class="to-top" id="toTopBtn" aria-label="Voltar ao topo">
+      <svg
+        width="18"
+        height="18"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+      >
+        <path d="M12 19V5" />
+        <path d="M5 12l7-7 7 7" />
+      </svg>
+    </button>
+
+    <script type="module" src="js/main.js"></script>
   </body>
 </html>

@@ -1,33 +1,17 @@
-.side-index {
-  position: fixed;
-  right: 22px;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 55;
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-.side-index a {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: var(--mono);
-  font-size: 10px;
-  color: var(--text-faint);
-  border: 1px solid var(--border);
-  transition: all 0.25s ease;
-}
-.side-index a.active {
-  color: #fff;
-  background: var(--grad);
-  border-color: transparent;
-}
-@media (max-width: 900px) {
-  .side-index {
-    display: none;
-  }
-}
+/* ============================================================
+   STYLES.CSS
+   Ponto de entrada do CSS. É o único arquivo linkado no
+   index.html — a ordem de importação abaixo importa:
+
+   1. reset       → zera diferenças entre navegadores
+   2. variables   → cores, fontes e tokens de design
+   3. base        → estilos globais de html/body/tipografia
+   4. layout      → estrutura/posicionamento (grids, header)
+   5. components  → aparência dos componentes (botões, cards...)
+   ============================================================ */
+
+@import url("./base.css");
+@import url("./components.css");
+@import url("./layout.css");
+@import url("./reset.css");
+@import url("./variables.css");
