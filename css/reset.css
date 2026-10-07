@@ -1,9 +1,3 @@
-/* ============================================================
-   RESET.CSS
-   Normalização básica entre navegadores. Fica sempre em primeiro
-   lugar na cadeia de importação (ver styles.css).
-   ============================================================ */
-
 *,
 *::before,
 *::after {
