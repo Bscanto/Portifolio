@@ -27,7 +27,7 @@ header {
   position: sticky;
   top: 0;
   z-index: 60;
-  background: rgba(10, 10, 13, 0.75);
+  background: var(--header-bg);
   backdrop-filter: blur(14px);
   border-bottom: 1px solid var(--border);
 }
@@ -94,7 +94,7 @@ nav.links ul {
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
   gap: 60px;
-  align-items: start;
+  align-items: center;
   margin-top: 10px;
 }
 @media (max-width: 940px) {

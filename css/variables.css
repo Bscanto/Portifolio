@@ -8,6 +8,7 @@
 :root {
   /* cores base (tema escuro — padrão) */
   --bg: #0a0a0d;
+  --header-bg: rgba(10, 10, 13, 0.75);
   --panel: #151519;
   --panel-2: #1c1c22;
   --border: rgba(255, 255, 255, 0.1);
@@ -30,6 +31,7 @@
 /* Tema claro — ativado via classe .light na tag <html> (ver js/theme.js) */
 html.light {
   --bg: #f3f4f8;
+  --header-bg: rgba(243, 244, 248, 0.9);
   --panel: #ffffff;
   --panel-2: #eef0f5;
   --border: rgba(10, 13, 20, 0.1);
