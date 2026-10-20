@@ -86,6 +86,7 @@ O site não envia mensagens diretamente nem registra os dados em um servidor. O 
 | Calculadora | HTML, CSS, JavaScript | [GitHub](https://github.com/Bscanto/Calculadora-JS) | [Acessar](https://calculadora-js-ten-kappa.vercel.app/) |
 | Jogo da Velha | HTML, CSS, JavaScript | [GitHub](https://github.com/Bscanto/Projeto-Jogo_Velha) | [Acessar](https://projeto-jogo-velha.vercel.app/) |
 | Projeto Final — Compass UOL | JavaScript, Node.js, Express, OpenAI API, Multer | [GitHub](https://github.com/Bscanto/Projeto-Final-TimeA1_Bolsa-Compass) | Não informado |
+| Políticas de Bin Packing | Python, Streamlit | [GitHub](https://github.com/Bscanto/Politicas-bin-packing) | Não informado |
 
 Os botões de deploy sem endereço definido permanecem desativados. A categoria de cada card é usada pelo filtro; atualmente não há cards classificados exclusivamente como `backend`, portanto esse filtro exibe uma lista vazia.
 
