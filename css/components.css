@@ -669,6 +669,7 @@ h2.section-title {
 /* ---------- contato ---------- */
 .contato-panel {
   background: var(--grad);
+  border: 1px solid var(--border);
   border-radius: 28px;
   padding: 64px 56px;
   position: relative;
@@ -683,6 +684,7 @@ h2.section-title {
   content: "";
   position: absolute;
   inset: 0;
+  pointer-events: none;
   background: radial-gradient(
     circle at 80% 20%,
     rgba(255, 255, 255, 0.25),
@@ -697,8 +699,8 @@ h2.section-title {
   background: #fff;
 }
 h2.contato-title {
-  font-size: clamp(2.1rem, 5vw, 3.6rem);
-  line-height: 1.02;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+  line-height: 1.15;
   font-weight: 900;
   color: #fff;
   text-transform: uppercase;
@@ -721,12 +723,12 @@ h2.contato-title {
   display: flex;
   align-items: center;
   gap: 14px;
-  background: rgba(10, 10, 13, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--panel-2);
+  border: 1px solid var(--border);
   border-radius: 14px;
   padding: 16px 20px;
   font-size: 14px;
-  color: #fff;
+  color: var(--text);
   font-family: var(--mono);
   transition:
     transform 0.2s ease,
@@ -734,15 +736,53 @@ h2.contato-title {
 }
 .contact-list a:hover {
   transform: translateY(-2px);
-  background: rgba(10, 10, 13, 0.5);
+  background: var(--bg);
+  border-color: var(--accent1);
+}
+.contact-list svg {
+  flex-shrink: 0;
+  color: var(--accent1);
+}
+.contact-list span {
+  overflow-wrap: anywhere;
 }
 
 /* ---------- formulário de contato (ver js/form.js) ---------- */
 .contact-form {
-  margin-top: 40px;
+  margin: 0;
+  padding: 28px;
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 20px;
   display: grid;
   gap: 16px;
-  max-width: 460px;
+  min-width: 0;
+}
+.contact-form h3 {
+  margin: 0;
+  font-family: var(--display);
+  font-size: 18px;
+  color: var(--text);
+}
+.form-note {
+  margin: 0 0 8px;
+  color: var(--text-soft);
+  font-size: 13px;
+  line-height: 1.65;
+}
+.contact-form .btn-light {
+  justify-content: center;
+  background: var(--accent1);
+  color: #fff;
+  min-height: 48px;
+}
+@media (max-width: 640px) {
+  .contact-form {
+    padding: 20px;
+  }
+  .contato-panel {
+    padding: 28px 18px;
+  }
 }
 .form-group {
   display: flex;
@@ -754,27 +794,30 @@ h2.contato-title {
   font-size: 11px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-soft);
 }
 .form-group input,
 .form-group textarea {
-  background: rgba(10, 10, 13, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: var(--panel);
+  border: 1px solid var(--border-strong);
   border-radius: 10px;
   padding: 12px 14px;
-  color: #fff;
-  font-size: 14px;
+  color: var(--text);
+  font-size: 16px;
+  width: 100%;
+  min-width: 0;
   resize: vertical;
   transition: border-color 0.2s ease;
 }
 .form-group input:focus,
 .form-group textarea:focus {
-  outline: none;
-  border-color: #fff;
+  outline: 2px solid var(--accent1);
+  outline-offset: 2px;
+  border-color: var(--accent1);
 }
 .form-group input::placeholder,
 .form-group textarea::placeholder {
-  color: rgba(255, 255, 255, 0.5);
+  color: var(--text-soft);
 }
 .form-status {
   font-family: var(--mono);
@@ -782,10 +825,12 @@ h2.contato-title {
   min-height: 16px;
 }
 .form-status.success {
-  color: #bbf7d0;
+  color: var(--text);
 }
 .form-status.error {
-  color: #fecaca;
+  color: var(--text);
+  border-left: 3px solid #ef4444;
+  padding-left: 10px;
 }
 
 /* ---------- rodapé ---------- */
