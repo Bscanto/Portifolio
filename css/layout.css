@@ -32,18 +32,20 @@ header {
   border-bottom: 1px solid var(--border);
 }
 .nav {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: flex-start;
   height: 84px;
   gap: 24px;
 }
+.nav-actions {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+  gap: 16px;
+}
 .nav .theme-toggle {
   flex-shrink: 0;
-  margin-left: auto;
-}
-.nav .links {
-  margin-left: clamp(0px, 3vw, 40px);
 }
 nav.links ul {
   display: flex;
@@ -51,10 +53,11 @@ nav.links ul {
 }
 @media (max-width: 760px) {
   .nav {
+    grid-template-columns: 1fr auto;
     gap: 12px;
   }
-  .nav .logo {
-    margin-right: auto;
+  .nav-actions {
+    gap: 12px;
   }
   nav.links {
     display: none;
