@@ -1,34 +1,13 @@
 // main.js
 // Ponto de entrada da aplicação. Importa cada módulo e inicializa
 // tudo quando o DOM estiver pronto. Comportamentos pequenos que
-// não justificam um arquivo próprio (cursor, botões magnéticos,
+// não justificam um arquivo próprio (botões magnéticos,
 // filtro de projetos, accordion) ficam aqui mesmo.
 
 import { initTheme } from "./theme.js";
 import { initNav } from "./nav.js";
 import { initRevel } from "./revel.js";
 import { initForm } from "./form.js";
-
-function initCursor() {
-  const cursorDot = document.querySelector(".cursor-dot");
-  const cursorRing = document.querySelector(".cursor-ring");
-  if (!cursorDot || !cursorRing) return;
-  if (!matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-
-  window.addEventListener("mousemove", (e) => {
-    cursorDot.style.left = `${e.clientX}px`;
-    cursorDot.style.top = `${e.clientY}px`;
-    cursorRing.style.left = `${e.clientX}px`;
-    cursorRing.style.top = `${e.clientY}px`;
-  });
-
-  document.querySelectorAll("a, button, .proj-card").forEach((el) => {
-    el.addEventListener("mouseenter", () => cursorRing.classList.add("hover"));
-    el.addEventListener("mouseleave", () =>
-      cursorRing.classList.remove("hover"),
-    );
-  });
-}
 
 function initMagneticButtons() {
   document.querySelectorAll(".pill-btn, .btn-light").forEach((btn) => {
@@ -76,7 +55,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initRevel();
   initForm();
-  initCursor();
   initMagneticButtons();
   initProjectFilter();
   initAccordion();

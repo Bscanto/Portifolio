@@ -34,15 +34,28 @@ header {
 .nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: flex-start;
   height: 84px;
-  gap: 16px;
+  gap: 24px;
+}
+.nav .theme-toggle {
+  flex-shrink: 0;
+  margin-left: auto;
+}
+.nav .links {
+  margin-left: clamp(0px, 3vw, 40px);
 }
 nav.links ul {
   display: flex;
   gap: 34px;
 }
 @media (max-width: 760px) {
+  .nav {
+    gap: 12px;
+  }
+  .nav .logo {
+    margin-right: auto;
+  }
   nav.links {
     display: none;
   }
