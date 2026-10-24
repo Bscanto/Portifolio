@@ -14,7 +14,7 @@ body {
 }
 
 ::selection {
-  background: var(--accent1);
+  background: var();
   color: #fff;
 }
 
